@@ -12,8 +12,7 @@ class HomePage extends StatefulWidget  {
 
 class _HomePageState extends State<HomePage> {
   List tasks = [
-    ['Mobile dev workshop', false],
-    ['Social event', false],
+    // Fill in some initial data
   ];
 
   List colors = [
@@ -25,13 +24,13 @@ class _HomePageState extends State<HomePage> {
 
   void checkBoxChanged(int index) {
     setState(() {
-      tasks[index][1] = !tasks[index][1];
+      // Change check box state
     });
   }
 
   void taskDeleted(int index) {
     setState(() {
-      tasks.removeAt(index);
+      // Remove task
     });
   }
 
@@ -54,29 +53,15 @@ class _HomePageState extends State<HomePage> {
         child: ListView.builder(
             itemCount: tasks.length,
             itemBuilder: (BuildContext context, index) {
-              return Task(
-                taskName: tasks[index][0],
-                taskStatus: tasks[index][1],
-                borderColor: colors[index % 4][0],
-                backgroundColor: colors[index % 4][1],
-                onChanged: (value) => checkBoxChanged(index),
-                onDeleted: () => taskDeleted(index),
+              return Container(
+                // Tasks
               );
             }
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => AddTask()),
-          ).then((newTask) {
-            if (newTask != null) {
-              setState(() {
-                tasks.add([newTask, false]);
-              });
-            }
-          });
+          // Navigate to the next screen
         },
         child: Icon(Icons.add),
       ),

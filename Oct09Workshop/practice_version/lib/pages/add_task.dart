@@ -9,7 +9,7 @@ class AddTask extends StatelessWidget {
         appBar: AppBar(
           title: Center(
             child: Image.asset(
-              'assets/gdg_logo.png',
+              '', // What is the logo file path?
               height: 60,
               width: 310,
             ),
@@ -17,7 +17,7 @@ class AddTask extends StatelessWidget {
           backgroundColor: Color.fromARGB(255, 241, 243, 244),
         ),
         body: Padding(
-            padding: const EdgeInsets.all(25.0),
+            padding: EdgeInsets.zero, // How do we add padding?
             child: Column(
                 children: [
                   TextField(
@@ -41,10 +41,10 @@ class AddTask extends StatelessWidget {
                   SizedBox(height: 40),
                   ElevatedButton(
                     onPressed: () {
-                      Navigator.pop(context, _taskController.text);
+                      // Navigate back to the first screen
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color.fromARGB(255, 230, 230, 250),
+                      backgroundColor: Colors.white, // What color to put here?
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
