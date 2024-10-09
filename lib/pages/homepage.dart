@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:gdg/components/task.dart';
-import 'package:gdg/pages/add_task.dart';
+import '../components/task.dart';
+import 'add_task.dart';
 
 class HomePage extends StatefulWidget  {
   const HomePage({super.key});
@@ -40,15 +40,12 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Row(
-          children: [
-            SizedBox(width: 55),
-            Image.asset(
-              'assets/gdg_logo.png',
-              height: 60,
-              width: 310,
-            ),
-          ]
+        title: Center(
+          child: Image.asset(
+            'assets/gdg_logo.png',
+            height: 60,
+            width: 310,
+          ),
         ),
         backgroundColor: Color.fromARGB(255, 241, 243, 244),
       ),
