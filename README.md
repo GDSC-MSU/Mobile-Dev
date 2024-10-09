@@ -1,4 +1,4 @@
-# gdg
+# GDG MSU - Mobile Dev Resources
 
 Todo app
 
